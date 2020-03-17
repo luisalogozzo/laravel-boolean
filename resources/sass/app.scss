@@ -1,1 +1,55 @@
-//
+body {
+  font-family: 'Rubik', sans-serif;
+}
+.navbar {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  .nav-left {
+    display: flex;
+    align-items: center;
+    img {
+      width: 40%;
+    }
+  }
+  .nav-right {
+    display: flex;
+    align-items: center;
+
+    ul li {
+      display: inline;
+      text-transform: uppercase;
+      margin-left: 30px;
+    } ul li a {
+      text-decoration: none;
+      color: #1B3C59;
+      font-size: 14px;
+    }
+  }
+}//
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  .student {
+    width: calc(50% - 40px);
+    height: 270px;
+    padding: 20px;
+    .main-info {
+      display: flex;
+      .student-foto {
+        width: 30%;
+        img {
+          width: 100%;
+        }
+      }
+      .student-job {
+        padding: 10px;
+        width: 70%;
+      }
+    }
+  }
+}
