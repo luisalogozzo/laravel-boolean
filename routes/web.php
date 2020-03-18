@@ -16,9 +16,10 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
-Route::get('/exStudenti', 'ExStudenteController@Show')->name('exStudenti');
 
-Route::get('/studentDetail', 'ExStudenteController@ShowDetail')->name('studentDetail');
+// Route::get('/', 'StaticPageController@index')->name('static_page_home');
+Route::get('/faq', 'StaticPageController@faq')->name('static_page_faq');
+Route::get('/privacy', 'StaticPageController@privacy')->name('static_page_privacy');
+Route::get('/carriere', 'StudentController@index')->name('student.index');
+Route::get('/carriere/studente/{slug}', 'StudentController@show')->name('student.show');
+// Route::get('/studentDetail', 'ExStudenteController@ShowDetail')->name('studentDetail');
