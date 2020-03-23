@@ -15,22 +15,22 @@
       @foreach ($students as $key => $student)
         <div class="student">
             <div class="main-info">
-              <a class="student-foto" href="{{route('student.show', ['slug' => $student['slug']] )}}">
-                <img src="{{$student['foto']}}" alt="">
+              <a class="student-foto" href="">
+                <img src="{{$student->foto}}" alt="">
               </a>
               <div class="student-job">
-                <h3>{{$student['name']}} (anni: {{$student['age']}})</h3>
-                <h4>Lavora presso {{$student['azienda']}} come {{$student['ruolo']}}</h4>
+                <h3>{{$student->name}} (anni: {{$student->age}})</h3>
+                <h4>Lavora presso {{$student->azienda}} come {{$student->ruolo}}</h4>
               </div>
             </div>
-            <p>{{$student['descrizione']}}</p>
+            <p>{{$student->descrizione}}</p>
           </div>
       @endforeach
   </div>
   <script id="student-template" type="text/x-handlebars-template">
     <div class="student">
         <div class="main-info">
-          <a class="student-foto" href="{{route('student.show', ['slug' => $student['slug']] )}}">
+          <a class="student-foto" href="">
             <img src="@{{foto}}" alt="">
           </a>
           <div class="student-job">
