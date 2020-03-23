@@ -8,7 +8,7 @@
           <img src="{{$thisStudent['foto']}}" alt="">
         </a>
         <div class="student-job">
-          <h3>{{$thisStudent['nome']}} (anni: {{$thisStudent['eta']}})</h3>
+          <h3>{{$thisStudent['name']}} (anni: {{$thisStudent['age']}})</h3>
           <h4>Lavora presso {{$thisStudent['azienda']}} come {{$thisStudent['ruolo']}}</h4>
         </div>
       </div>

@@ -1,37 +1,44 @@
 @extends('layouts.layout')
 
 @section ('main')
-  <div class="filter">
-    <select name="filter" id='filter'>
-      <option value="all">All</option>
+  <form class="" action="index.html" method="post">
+    <input id="name" type="text" name="name" value="" placeholder="nome">
+    <input id="age" type="number" name="age" value="" placeholder="etá">
+    <select name="gender" id='gender'>
+      <option value="">All</option>
       <option value="uomo">Uomo</option>
       <option value="donna">Donna</option>
     </select>
-  </div>
+    <input id="submit" type="button" name="submit" value="SUBMIT">
+  </form>
   <div class="container">
-    <div class="student">
       @foreach ($students as $key => $student)
-
+        <div class="student">
             <div class="main-info">
               <a class="student-foto" href="{{route('student.show', ['slug' => $student['slug']] )}}">
-
                 <img src="{{$student['foto']}}" alt="">
               </a>
-
-
-
               <div class="student-job">
-                <h3>{{$student['nome']}} (anni: {{$student['eta']}})</h3>
+                <h3>{{$student['name']}} (anni: {{$student['age']}})</h3>
                 <h4>Lavora presso {{$student['azienda']}} come {{$student['ruolo']}}</h4>
               </div>
             </div>
             <p>{{$student['descrizione']}}</p>
-        {{-- </a> --}}
+          </div>
       @endforeach
-    </div>
   </div>
-
-
-
-
+  <script id="student-template" type="text/x-handlebars-template">
+    <div class="student">
+        <div class="main-info">
+          <a class="student-foto" href="{{route('student.show', ['slug' => $student['slug']] )}}">
+            <img src="@{{foto}}" alt="">
+          </a>
+          <div class="student-job">
+            <h3>@{{name}} anni: @{{age}}</h3>
+            <h4>Lavora presso @{{azienda}} come @{{ruolo}}</h4>
+          </div>
+        </div>
+        <p>@{{descrizione}}</p>
+      </div>
+</script>
 @endsection

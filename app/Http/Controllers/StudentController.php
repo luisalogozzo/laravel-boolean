@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Student;
 
 use Illuminate\Http\Request;
 
@@ -10,7 +11,8 @@ class StudentController extends Controller
   private $genders;
   public function __construct()
   {
-    $this->students = config('students.students');
+    $this->students = Student::all();
+    // $this->students = config('students.students');
     $this->genders = config('students.genders');
   }
 

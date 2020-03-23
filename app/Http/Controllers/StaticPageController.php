@@ -6,12 +6,16 @@ use Illuminate\Http\Request;
 
 class StaticPageController extends Controller
 {
+  public function Index()
+  {
+    return view('staticpages.index');
+  }
   public function privacy()
   {
-    view('staticpages.privacy');
+    return view('staticpages.privacy');
   }
   public function faq()
   {
-    view('staticpages.faq');
+    return view('staticpages.faq');
   }
 }

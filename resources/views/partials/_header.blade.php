@@ -17,9 +17,9 @@
     <div class="nav-right">
       <nav>
         <ul>
-          <li><a href="#">Home</a> </li>
+          <li><a href="http://127.0.0.1:8000/">Home</a> </li>
           <li><a href="#">Corso</a> </li>
-          <li><a href="#">Dopo il corso</a> </li>
+          <li><a href="http://127.0.0.1:8000/carriere">Dopo il corso</a> </li>
           <li><a href="#">lezione gratuita</a> </li>
           <li><a href="#">candidati ora</a> </li>
         </ul>

@@ -33,7 +33,7 @@ body {
       font-size: 14px;
     }
   }
-}//
+}
 
 .container {
   display: flex;
@@ -41,9 +41,12 @@ body {
   width: 80%;
   margin: 0 auto;
   .student {
-    width: calc(50% - 40px);
+    width: calc(50% - 80px);
     height: 270px;
+    margin: 20px;
     padding: 20px;
+    border: 1px solid rgba(1, 1, 1, 0.1);
+    box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.1);
     .main-info {
       display: flex;
       .student-foto {
